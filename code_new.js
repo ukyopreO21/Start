@@ -64,7 +64,8 @@ function start(){
 function getAnswer(){
     if(event.keyCode==13){
         var answer = document.getElementById("textboxid").value;
-        answer = answer.toUpperCase();
+        answer = answer.toUpperCase().replace(/\s+/g,' ').trim();
+        answer = answer.replace(/\s+/g,' ').trim();
         ans[index] = answer;
         if (answer == key[index].toUpperCase()){
             var right = new Audio ("Right.mp3");
